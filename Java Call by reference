@@ -1,0 +1,27 @@
+
+
+public class CallByref {
+    
+    public void refference(Add a)
+    {
+       a.x = 100;
+       System.out.println(" The result is "+a.x);
+    }
+    
+
+    public static void main(String[] args) {
+        System.out.println("This is call by reference example");
+        CallByref cbr = new CallByref();
+        Add a = new Add();
+        cbr.refference(a);    // x value is changed in this function    
+        a.display();
+    }
+}
+class Add 
+{
+  int x = 10;
+  public void display()
+  {
+      System.out.println(" The Result is "+x);
+  }
+}
